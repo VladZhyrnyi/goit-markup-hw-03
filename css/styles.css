@@ -14,6 +14,12 @@
     --border-color: #eeeeee;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -29,6 +35,9 @@
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
+
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -39,13 +48,38 @@ body {
 
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
 /* ------------------------- Header ----------------------- */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .logo {
+    display: inline-block;
+    margin-right: 90px;
+}
 
 .logo {
     font-family: "Raleway";
@@ -66,8 +100,24 @@ a {
     color: var(--accent-text-color);
 }
 
+.nav-list,
+.contact-list {
+    display: flex;
+}
+
+.contact-list {
+    margin-left: auto;
+}
+
+.nav-list-item:not(:last-child),
+.contact-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .nav-link,
 .contact-link {
+    display: block;
+
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -96,12 +146,26 @@ a {
     background-color: var(--footer-background);
 }
 
+.footer .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
 .address {
     font-style: normal;
     line-height: 1.71;
     letter-spacing: 0.03em;
 
     color: var(--white-color);
+}
+
+.address-list .address-list-item + .address-list-item {
+    margin-top: 9px;
 }
 
 .footer-contact-link {
@@ -113,11 +177,19 @@ a {
 
 /* ------------------------- Hero section ----------------------- */
 
-.hero {
+.hero-sec {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color: var(--footer-background);
+
+    text-align: center;
 }
 
 .hero-title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 700px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -156,7 +228,14 @@ a {
 
 /* ------------------------- Features WhatWeDo sections ----------------------- */
 
+.section {
+    margin-top: 95px;
+}
+
 .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -179,19 +258,60 @@ a {
     letter-spacing: 0.03em;
 }
 
+.feature-list {
+    display: flex;
+}
+
+.feature-list .fl-item + .fl-item {
+    margin-left: 30px;
+}
+
+.fl-item .section-subtitle {
+    margin: 0px;
+}
+
+.fl-item .section-text {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.description-list {
+    display: flex;
+}
+
+.description-list > .dl-item + .dl-item {
+    margin-left: 30px;
+}
+
 /* ------------------------- AboutUs section ----------------------- */
 
 .team-section {
     background-color: var(--section-background);
+    padding-top: 95px;
+    padding-bottom: 95px;
 }
 
-.teammates > li {
+.team-section .section-title {
+    margin-bottom: 50px;
+}
+
+.teammate-list {
+    display: flex;
+}
+
+.teammate-list-item {
     font-size: 16px;
     background-color: var(--white-color);
-    border: 1px solid var(--border-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.teammates .section-subtitle {
+.teammate-list-item + .teammate-list-item {
+    margin-left: 30px;
+}
+
+.teammate-list .section-subtitle {
     font-weight: 500;
     line-height: 1.18;
     text-align: center;
@@ -199,11 +319,14 @@ a {
     letter-spacing: 0.03em;
 }
 
-.teammates .position {
+.teammate-list .position {
     font-weight: 400;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.teammate-description {
 }
 
 /* ------------------------- Portfolio section ----------------------- */
