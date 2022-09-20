@@ -72,7 +72,7 @@ a {
 .page-header .container {
   display: flex;
   align-items: center;
-  height: 80px;
+  padding: 24px 0;
 }
 
 .nav {
@@ -90,7 +90,7 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: calc(32px / 26px);
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
@@ -182,8 +182,7 @@ a {
 /* ------------------------- Hero section ----------------------- */
 
 .hero-sec {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px 252px;
   background-color: var(--footer-background);
 
   text-align: center;
@@ -233,7 +232,7 @@ a {
 /* ------------------------- Features WhatWeDo sections ----------------------- */
 
 .section {
-  margin-top: 95px;
+  padding: 94px 0;
 }
 
 .section-title {
@@ -260,6 +259,10 @@ a {
 .section-text {
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.description-sec {
+  padding-top: 0;
 }
 
 .feature-list {
@@ -291,8 +294,6 @@ a {
 
 .team-section {
   background-color: var(--section-background);
-  padding-top: 95px;
-  padding-bottom: 95px;
 }
 
 .team-section .section-title {
@@ -363,7 +364,6 @@ a {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 94px;
 }
 
 .portfolio-item {
