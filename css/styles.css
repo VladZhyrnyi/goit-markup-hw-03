@@ -34,6 +34,11 @@
   overflow: hidden;
 }
 
+h1, h2, h3, a, ul, li {
+  margin: 0;
+  padding: 0;
+} 
+
 body {
   margin: 0px;
   padding: 0px;
@@ -72,7 +77,6 @@ a {
 .page-header .container {
   display: flex;
   align-items: center;
-  padding: 24px 0;
 }
 
 .nav {
@@ -121,6 +125,7 @@ a {
 .nav-link,
 .contact-link {
   display: block;
+  padding: 32px 0;
 
   font-weight: 500;
   line-height: 1.14;
@@ -156,7 +161,7 @@ a {
 }
 
 .footer .logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -191,7 +196,7 @@ a {
 .hero-title {
   margin: 0 auto;
   margin-bottom: 30px;
-  width: 700px;
+  max-width: 696px;
 
   font-weight: 900;
   font-size: 44px;
@@ -205,6 +210,8 @@ a {
 }
 
 .hero-btn {
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -267,6 +274,10 @@ a {
 
 .feature-list {
   display: flex;
+}
+
+.fl-item {
+  width: calc((100% - 90px) / 4)
 }
 
 .feature-list .fl-item + .fl-item {
@@ -337,10 +348,7 @@ a {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.filter-btn-list .filter-btn-item + .filter-btn-item {
-  margin-left: 8px;
+  gap: 8px;
 }
 
 .filter-btn {
