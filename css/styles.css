@@ -34,10 +34,40 @@
   overflow: hidden;
 }
 
-h1, h2, h3, a, ul, li {
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-} 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 body {
   margin: 0px;
@@ -327,7 +357,12 @@ a {
   margin-left: 30px;
 }
 
+.teammate-description {
+  padding: 30px;
+}
+
 .teammate-list .section-subtitle {
+  margin-bottom: 10px;
   font-weight: 500;
   line-height: 1.18;
   text-align: center;
